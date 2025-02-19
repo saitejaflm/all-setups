@@ -16,3 +16,5 @@ aws s3api put-bucket-versioning --bucket saiteja.flm --region us-east-1 --versio
 export KOPS_STATE_STORE=s3://saiteja.flm
 kops create cluster --name saiteja.k8s.local --zones us-east-1a --master-count=1 --master-size t2.medium --node-count=2 --node-size t2.micro
 kops update cluster --name saiteja.k8s.local --yes --admin
+
+#NOTE: "if you have already bucket name (saiteja.flm) means please remove the 14th, 15th line from this script" 
