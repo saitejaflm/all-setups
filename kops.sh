@@ -18,3 +18,7 @@ kops create cluster --name saiteja.k8s.local --zones us-east-1a --master-count=1
 kops update cluster --name saiteja.k8s.local --yes --admin
 
 #NOTE: "if you have already bucket name (saiteja.flm) means please remove the 14th, 15th line from this script" 
+#if you want to delete cluster means user step one: " export KOPS_STATE_STORE=s3://saiteja.flm "
+# step two: " kops get cluster "
+#now copy your cluster name: " saiteja.k8s.local "
+#step three: " kops delete cluster saiteja.k8s.local --yes "
